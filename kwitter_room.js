@@ -1,6 +1,6 @@
 
 //ADD YOUR FIREBASE LINKS HERE
-const firebaseConfig = {
+var firebaseConfig = {
       apiKey: "AIzaSyDAi7wRiv5EkEPMfJYo3CC2Gg4wSj__PVc",
       authDomain: "project-94-e4a99.firebaseapp.com",
       databaseURL: "https://project-94-e4a99-default-rtdb.firebaseio.com",
@@ -12,8 +12,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+firebase.initializeApp(firebaseConfig);
 
 function getData() {
       firebase.database().ref("/").on('value', function (snapshot) {

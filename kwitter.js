@@ -9,13 +9,11 @@ var firebaseConfig = {
     measurementId: "G-Z41JQXVB4L"
 };
 
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-function addUser(){
+function addUser() {
     user_name = document.getElementById("user_name").value;
-    user_name = document.getElementById("user_name").value;
-    firebase.database().ref("/").child(user_name).update({
-        purpose: "adding user"
-    });
+    localStorage.setItem("user_name", user_name);
     window.location = "kwitter_room.html";
 }
